@@ -1,6 +1,6 @@
 package guru.springframework.petclinic.model;
 
-public class Speciality extends BaseEntity{
+public class Speciality extends BaseEntity {
 
     private String description;
 
