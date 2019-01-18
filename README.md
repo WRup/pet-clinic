@@ -1,2 +1,2 @@
 # pet-clinic
-Spring Pet Clinic
+Populer Spring Pet Clinic app which is a Spring Boot application built using Maven.
