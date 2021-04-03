@@ -13,7 +13,7 @@ public class Pet extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "type_id")
-    private PetType petyType;
+    private PetType petType;
 
     @ManyToOne
     @JoinColumn(name = "owner_id")
@@ -34,12 +34,12 @@ public class Pet extends BaseEntity {
         this.name = name;
     }
 
-    public PetType getPetyType() {
-        return petyType;
+    public PetType getPetType() {
+        return petType;
     }
 
-    public void setPetyType(PetType petyType) {
-        this.petyType = petyType;
+    public void setPetType(PetType petType) {
+        this.petType = petType;
     }
 
     public Owner getOwner() {
