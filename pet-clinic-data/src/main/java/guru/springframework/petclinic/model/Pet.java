@@ -1,7 +1,5 @@
 package guru.springframework.petclinic.model;
 
-import org.hibernate.annotations.Cache;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Set;
