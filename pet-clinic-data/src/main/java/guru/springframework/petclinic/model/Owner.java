@@ -51,4 +51,14 @@ public class Owner extends Person {
     public void setPets(Set<Pet> pets) {
         this.pets = pets;
     }
+
+    public Pet getPet(String name) {
+        return getPet(name, false);
+    }
+
+    public Pet getPet(String name, boolean ignoreNew) {
+        return pets.stream().filter(p -> !ignoreNew || !p.isNew())
+                .filter(p -> name.equalsIgnoreCase(p.getName()))
+                .findFirst().orElse(null);
+    }
 }
