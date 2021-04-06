@@ -2,10 +2,11 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml" th:replace="~{fragments/layout :: layout (~{::body}, 'home')}" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pet Clinic Index</title>
+    <title>Pet-Vet Index</title>
 </head>
 <body>
-<h1 th:text="#{welcome}">Welcome</h1>
+<h1 th:text="'Welcome to Vet-Pet!'" style="text-align: center">Welcome to Vet-Pet!</h1>
+<br/>
 <div class="container">
     <div class="row">
         <div class="col-sm-5">
@@ -19,7 +20,7 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <img class="center-block" src="../static/resources/images/vets_2.jpg" th:src="@{/resources/images/newry-vets.jpg}" alt="Vets_2_Image"/>
+                        <img class="center-block" src="../static/resources/images/vets_2.jpg" th:src="@{/resources/images/vets_2.jpg}" alt="Vets_2_Image"/>
                     </div>
 
                     <div class="item">
@@ -40,9 +41,20 @@
         </div>
         <div class="col-sm-7">
             <div class="well">
-                <p><b>Welcome to Vet-Pet!</b></p>
                 <p>We are a professional veterinary clinic that will take care of your pet.</p>
                 <p>Our specialized vets are ready to help at any time.</p>
+                <p>Our mission is to provide full service and quality care to family pets – especially dogs and cats.
+                    The clinic offers a wide range of services in the field of internal medicine and surgery, as well as specialized services in the field of:</p>
+                <ul>
+                    <li>ophthalmology (including cataract removal using the phacoemulsification technique),</li>
+                    <li>cardiology</li>
+                    <li>dentistry</li>
+                    <li>oncology</li>
+                    <li>reproduction and breeding</li>
+                    <li>diagnostic imaging</li>
+                    <li>veterinary neurology</li>
+                    <li>and others.</li>
+                </ul>
                 <p>Register and make an appointment by clicking the link below: </p>
                 <br/>
                 <p>
@@ -53,12 +65,6 @@
     </div>
     <hr>
 </div>
-
-<!--<div class="row">-->
-<!--    <div class="col-md-12">-->
-<!--        <img class="img-responsive" src="../static/resources/images/pets.png" th:src="@{/resources/images/pets.png}"/>-->
-<!--    </div>-->
-<!--</div>-->
 
 </body>
 </html>

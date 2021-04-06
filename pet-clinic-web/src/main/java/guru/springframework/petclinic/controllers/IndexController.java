@@ -11,8 +11,8 @@ public class IndexController {
         return "index";
     }
 
-    @RequestMapping(path = "/oups")
+    @RequestMapping(path = "/frameworks")
     public String error(){
-        return "notimplemented";
+        return "frameworks/info";
     }
 }
