@@ -4,7 +4,28 @@
 
 <body>
 
-<h2>Owners</h2>
+<h2 style="text-align: center">OWNERS</h2>
+<br/>
+<form th:object="${owner}" th:action="@{/owners}" method="get"
+      class="form-horizontal" id="search-owner-form">
+    <div class="form-group">
+        <div class="control-group" id="lastNameGroup">
+            <label class="col-sm-2 control-label" style="text-align: center">Last name:</label>
+            <div class="col-sm-6">
+                <input class="form-control" th:field="*{lastName}" size="30"
+                       maxlength="80" /> <span class="help-inline"><div
+                    th:if="${#fields.hasAnyErrors()}">
+              <p th:each="err : ${#fields.allErrors()}" th:text="${err}">Error</p>
+            </div></span>
+            </div>
+            <div class="col-sm-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Find
+                    Owner</button>
+            </div>
+        </div>
+
+    </div>
+</form>
 
 <table id="owners" class="table table-striped">
     <thead>
@@ -28,6 +49,9 @@
     </tr>
     </tbody>
 </table>
+
+<br />
+<a class="btn btn-default" th:href="@{/owners/new}">Add Owner</a>
 
 </body>
 </html>
